@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_navigation"
+    app:startDestination="@id/recycleMusicFragment2">
+
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.abdurashidov.musicplayer.ui.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_recycleMusicFragment2"
+            app:destination="@id/recycleMusicFragment2" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/recycleMusicFragment2"
+        android:name="com.abdurashidov.musicplayer.ui.RecycleMusicFragment"
+        android:label="fragment_recycle_music"
+        tools:layout="@layout/fragment_recycle_music" >
+        <action
+            android:id="@+id/action_recycleMusicFragment2_to_playMusicFragment"
+            app:destination="@id/playMusicFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/playMusicFragment"
+        android:name="com.abdurashidov.musicplayer.ui.PlayMusicFragment"
+        android:label="fragment_play_music"
+        tools:layout="@layout/fragment_play_music" />
+
+</navigation>
